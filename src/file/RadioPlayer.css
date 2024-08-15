@@ -1,0 +1,118 @@
+body {
+  background-image: url("./Components/radi.png"); /* Update this path to the correct one */
+  background-repeat: no-repeat;
+  background-size: contain; /* Adjusts the image to fit the container */
+  background-position: center; /* Centers the background image */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background-color: black;
+}
+
+.radio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.spacer {
+  height: 50px; /* Adjust as needed for Navbar space */
+}
+
+.radio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  
+  margin-top: 150px;
+}
+
+.selection-panel, .stations-panel {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(11, 1, 55, 0.1);
+  padding: 15px;
+  color: #000000;
+  
+}
+
+.selection-panel {
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: rgb(0, 0, 0);
+  margin-left: 190px;
+}
+
+.stations-panel {
+  width: 40%;
+  height: 400px; /* Static height for the stations panel */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: rgb(0, 0, 0);
+  margin-right: 190px;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.country-select, .language-select {
+  margin-bottom: 20px;
+}
+
+.station-player {
+  margin-top: 20px;
+}
+
+.station-name {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.stations-list {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.station-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  border-radius: 5px;
+  color: aliceblue;
+  transition: background-color 0.3s ease, background 0.3s ease; /* Add transition for gradient */
+}
+
+.station-item.active-station {
+  background-color: #000000; /* Bright blue when active */
+  /* Ensure that active-station does not conflict with hover effect */
+}
+
+.station-item:hover {
+  /* background: linear-gradient(to top right, #fe2fbc, #ae5ef9); Gradient on hover */
+  background: linear-gradient(to top right, #f62cd7, #fb2828); 
+  color: aliceblue;
+  /* text-decoration: none; */
+}
+
+
+.station-link {
+  color: #cfb9ff; /* Neon yellow */
+  text-decoration: none;
+  cursor: pointer;
+}
+.station-link:hover{
+  color: #ffffff; /* Neon yellow */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.station-link:hover {
+  text-decoration: underline;
+}
+
+#radio-audio {
+  width: 250px;
+}
+.stations-panel::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

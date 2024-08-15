@@ -1,0 +1,661 @@
+/* Home Page CSS */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+/* Common Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  padding: 10px 20px;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(242, 242, 244);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(16, 4, 56, 0.9);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for effects */
+}
+
+button:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  color: rgb(242, 242, 244);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent; /* Remove the black shadow */
+  /* margin-top: 0px; */
+}
+
+.nlist {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(242, 242, 244);
+  margin-top: 0;
+  background: transparent;
+}
+
+.h2list {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 50px;
+}
+
+.nitem {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(77, 54, 152);
+  border-radius: 30px;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transition for effects */
+}
+
+.nitem:hover {
+  animation: pulse 1s infinite; /* Apply pulse animation */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+  background-color: #010b10; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.logo-item {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  height: 100px; /* Adjust the height as needed */
+  width: auto;
+}
+
+/* Form Container Styles */
+.form-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 1200px;
+  height: 90%;
+  display: flex;
+  margin-left: 200px;
+  align-items: center;
+}
+
+.rdb{
+  /* background-image:url("./Components/disas.png"); */
+  background-image: url("https://image.slidesdocs.com/responsive-images/background/earthquake-prevention-and-disaster-reduction-houses-and-trees-powerpoint-background_e25ed0257b__960_540.jpg");
+  /* background-image: url("https://static.vecteezy.com/system/resources/previews/009/362/398/original/blue-dynamic-shape-abstract-background-suitable-for-web-and-mobile-app-backgrounds-eps-10-vector.jpg"); */
+  height: 742px;
+  background-color: #fef8f8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 900px; */
+}
+/* Form Styles */
+form {
+  background: rgba(255, 255, 255, 0.85); /* Translucent white background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Outer shadow */
+  height: 650px;
+  width: 50%; /* Adjusted to be larger */
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 20px; /* Adjusted gap between form fields */
+}
+form::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  /* margin-top: 1px; */
+  font-family: "Playfair Display", serif;
+}
+
+/* Flex container for form fields */
+.form-field {
+  
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  gap: 15px; /* Space between label and input */
+}
+
+/* Label Styles */
+label {
+  font-weight: bolder;
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  width: 40%; /* Adjust width of label */
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+  font-weight: bold;
+  width: 50%; /* Adjust width of input fields */
+  padding: 12px; /* Increased padding for better appearance */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+textarea.text {
+  height: 50%; /* Increased height for better usability */
+  resize: vertical;
+
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Button Styles */
+.location-button,
+.action-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1b0781;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+
+}
+.action-button{
+  margin-bottom: 20px;
+  background-color: #1b0781;
+}
+.location-button:hover,
+.action-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Location Button Specific Styles */
+.location-button {
+  width: 120px; /* Decrease the width as needed */
+  height: 35px;
+}
+.action-button {
+  width: 120px; /* Decrease the width as needed */
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+/* Home Page Map Styles */
+.responsive-map {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#map {
+  height: 100%; /* Make sure the map container fills the parent */
+}
+.forms{
+    width: 500px;
+    height: 400px;
+}
+.add-places-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.radio-image {
+  margin-right: 10px; /* Space between the image and text */
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+.radio-image:hover {
+  opacity: 0.8; /* Slightly dim the image on hover */
+}
+
+
+.add-places-btn {
+  border-radius: 50px;
+  width: 200px; /* Increased length of the add places icon */
+  height: auto; /* Maintain aspect ratio */
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for effects */
+}
+
+.add-places-btn:hover {
+  animation: pulse 1s infinite; /* Apply pulse animation */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+.form-header{
+  padding: 20px;
+  background-image: url("./Components/rescbg.png");
+}
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+:root {
+  --surface-color: #fff;
+  --curve: 30px;
+  --card-width: 300px;
+  --card-height: 300px;
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fef8f8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+  gap: 1.5rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--curve);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 20px var(--shadow-color); /* Elevated effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 12px 24px var(--shadow-color); /* Slightly stronger shadow on hover */
+}
+
+.card__image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: var(--curve); /* Round all corners of the image */
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 0 0 var(--curve) var(--curve); /* Round bottom corners */
+  background-color: var(--default-background);
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+  background-color: var(--hover-background);
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: var(--curve) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.card__arc {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 30 60 c 16 0 30 -16 30 -30 v 30 Z");
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  display: none;
+}
+
+.card__title {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #0c0b0c;
+}
+
+.card__required {
+  font-size: 1em;
+  color: #d32f2f;
+  margin: 0.5em 0;
+}
+
+.card__button {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  border-radius: var(--curve);
+  background-color: rgb(77, 54, 152);
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #010b10;
+}
+
+
+/* Container for input and buttons */
+.card__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em; /* Space between buttons and text box */
+}
+
+/* Input box styling */
+.card__input {
+  width: 50px; /* Smaller width for the text box */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center; /* Center text in the box */
+  font-size: 1em;
+}
+
+/* Button styling */
+.card__button {
+  width: 30px; /* Width of the buttons */
+  height: 30px; /* Height of the buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(77, 54, 152);
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #010b10;
+}
+
+.card__button--increment {
+  margin-left: 0.5em; /* Space on the left side of the + button */
+}
+
+.card__button--decrement {
+  margin-right: 0.5em; /* Space on the right side of the - button */
+}
+
+/* Products page card styling */
+.card {
+  position: relative;
+  display: block;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--curve);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 20px var(--shadow-color); /* Elevated effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 12px 24px var(--shadow-color); /* Slightly stronger shadow on hover */
+}
+
+/* Header and overlay styling */
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: var(--curve) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__title {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #0c0b0c;
+}
+
+/* Hide required info by default */
+.card__required-overlay {
+  display: none; /* Hide by default */
+}
+
+/* Show required info on hover */
+.card:hover .card__required-overlay {
+  display: block; /* Show on hover */
+}
+
+.card__required {
+  font-size: 1em;
+  color: #d32f2f;
+  margin: 0.5em 0;
+}
+
+
+
+
+/* Products page card styling */
+.card {
+  position: relative;
+  display: block;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--curve);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 20px var(--shadow-color); /* Elevated effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 12px 24px var(--shadow-color); /* Slightly stronger shadow on hover */
+}
+
+/* Header and overlay styling */
+/* Products page card styling */
+
+/* Products page card styling */
+.card {
+  position: relative;
+  display: block;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--curve);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 20px var(--shadow-color); /* Elevated effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 12px 24px var(--shadow-color); /* Slightly stronger shadow on hover */
+}
+
+/* Header and overlay styling */
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: var(--curve) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+/* Adjusted position of the header content */
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__title {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0.5em 1em;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #0c0b0c;
+}
+
+/* Container for input and buttons */
+.card__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em; /* Space between buttons and text box */
+  margin-top: 10px; /* Adjust margin-top to move elements up */
+}
+
+/* Input box styling */
+.card__input {
+  width: 50px; /* Smaller width for the text box */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center; /* Center text in the box */
+  font-size: 1em;
+}
+
+/* Button styling */
+.card__button {
+  width: 30px; /* Width of the buttons */
+  height: 30px; /* Height of the buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(77, 54, 152);
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #010b10;
+}
+
+.card__button--increment {
+  margin-left: 0.5em; /* Space on the left side of the + button */
+}
+
+.add-places-containers {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.iframe-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  height: 200px;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 10px;
+  z-index: 1000;
+}
+iframe {
+  border: none; 
+  transition: all 0.3s ease; 
+}
+
+
+

@@ -1,0 +1,201 @@
+:root {
+    --surface-color: #fff;
+    --curve: 30px; /* Reduced curve for a smaller card */
+    --card-width: 300px; /* Reduced width */
+    --card-height: 300px; /* Reduced height */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr)); /* Adjusted to new card width */
+    gap: 1.5rem; /* Adjusted gap for smaller cards */
+    /* margin: 4rem 5vw; */
+    margin-top: 70px;
+    padding: 0;
+    list-style-type: none;
+    font-size: larger;
+}
+
+.card {
+    position: relative;
+    display: block;
+    width: var(--card-width); /* Set width */
+    height: var(--card-height); /* Set height */
+    border-radius: var(--curve);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {      
+    width: 100%;
+    height: 60%; /* Adjusted to fit new card size */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: var(--curve);    
+    background-color: var(--default-background); /* Grey background */
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    height: 40%; /* Adjusted to fit new card size */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 1em; /* Add padding for spacing */
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+    background-color: var(--hover-background); /* Slightly darker grey on hover */
+    padding-bottom: 50px;
+}
+
+.card__header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between title and controls */
+    padding: 0.5em; /* Reduced padding to decrease gap */
+    border-radius: var(--curve) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+    width: 100%; /* Ensure it takes the full width of the card */
+}
+
+.card__title {
+    font-size: 1.2em; /* Adjusted size */
+    margin: 0;
+    padding: 0.5em 1em; /* Added padding for rectangular background */
+    background-color:#f0f0f0; /* Background color for the name */
+    border-radius: 5px; /* Rectangle shape with rounded corners */
+    color: #0c0b0c;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    background-color: rgba(32, 2, 121, 0.9);
+    /* background-color: rgba(18, 3, 65, 0.9); */
+    /* background-color: rgb(77, 54, 152); */
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    width:30px;
+    font-size: 1em;
+}
+.quantity-controls button:hover {
+    background-color: #0c0b0c; /* Change to your desired hover color */
+}
+.quantity-controls input {
+    width: 50px;
+    height:70%; /* Smaller width for the textbox */
+    text-align: center;
+    margin: 0 0.5em; /* Margin between buttons and input */
+}
+
+.card__required {
+    font-size: 1em; /* Font size for the required text */
+    color: #d32f2f; /* Red color to indicate importance */
+    margin: 0.5em 0; /* Margin to separate from the title and button */
+}
+
+.card__button {
+    display: block;
+    width: 100%;
+    padding: 0.8em; /* Reduced padding */
+    border: none;
+    border-radius: var(--curve);
+    background-color: rgb(1, 1, 1); /* Customize color */
+    /* background-color: rgb(77, 54, 152); Customize color */
+    color: #fff;
+    font-size: 0.9em; /* Adjusted size */
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: rgb(77, 54, 152); /* Customize hover color */
+}
+.proceed-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size:x-large;
+    color: white;
+    /* background-color: rgba(48, 3, 195, 0.9); */
+    background-color: rgba(18, 3, 65, 0.9);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .proceed-button:hover {
+    background-color: #0c0b0c;
+  }
+  
+
+  /* Add this to your Products.css file */
+.card__quantity {
+    color: #333; /* Darker color */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  .checkout-button {
+    display: block;
+    margin: 2em auto; /* Center the button and add some margin */
+    padding: 10px 20px;
+    background-color: rgba(18, 3, 65, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size:x-large;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .checkout-button:hover {
+    background-color: #372c78; /* Darker background on hover */
+  }
+  
+  .pro{
+    /* background-image: url("https://img.freepik.com/premium-vector/abstract-blue-black-colorful-vector-technology-background-design-brochure-website-flyer-geometric-blue-black-colorful-wallpaper-poster-certificate-presentation-landing-page_181182-34679.jpg?w=826"); */
+    /* background-image: url("https://i.pinimg.com/564x/66/9a/f9/669af9603e7b23b043ee9011f0ec2deb.jpg"); */
+    background-image: url("https://i.pinimg.com/564x/40/e1/4e/40e14ed5b134941bd9c42f1d7951d602.jpg");
+    /* background-image: url("https://i.pinimg.com/564x/f8/47/51/f84751003df1711a8aa1b80d37d90883.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/73/c2/83/73c283fc56bcbf5848fb008c8924da39.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/fe/f7/26/fef7264e94511ec90f11d63f36cd3972.jpg"); */
+    /* background-image: url("https://i.pinimg.com/564x/bb/29/38/bb2938b52defc3940f62f9bdddc37b30.jpg"); */
+    /* background-color: rgb(236, 216, 239); */
+    /* background-image: url('./Components/prod.jpg'); */
+  background-size: cover;
+  transition: height 0.3s ease;
+  height: 900px;
+}
+.carts{
+    background-image: url("https://i.pinimg.com/564x/40/e1/4e/40e14ed5b134941bd9c42f1d7951d602.jpg");
+    background-repeat: no-repeat;
+    background-position: relative;
+    background-size: cover;
+    height: 900px;
+  }
